@@ -1,0 +1,11 @@
+{
+    "marytts.runutils.Request": {
+        "module_sequence": [
+            "marytts.language.ru.Tokenizer",
+            "marytts.language.ru.Phonemiser"
+        ]
+    },
+    "marytts.language.ru.Phonemiser": {
+        "pos_punct_regex": ",|\\.|:"
+    }
+}
