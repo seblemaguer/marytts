@@ -26,6 +26,11 @@ import marytts.modules.nlp.JPhonemiser;
 
 // Configuration part
 import marytts.config.MaryConfigurationFactory;
+import marytts.config.MaryConfiguration;
+import marytts.config.JSONMaryConfigLoader;
+
+// Runtim
+import marytts.runutils.Request;
 
 // Locale
 import java.util.Locale;
@@ -85,5 +90,18 @@ public class MaryIT extends marytts.MaryIT {
         StringBuilder sb = new StringBuilder();
         Object t = phonemiser.phonemise("Привет", "NN", sb);
         Assert.assertNotNull(t);
+    }
+
+    @Test
+    public void testUtterance() throws Exception {
+        String input = "С югославской стороны в битве участвовали 4 дивизии общей численностью около 22 тысяч человек, в том числе около 4 тысяч больных и раненых.";
+
+        // Read configuration
+        MaryConfiguration conf = (new JSONMaryConfigLoader()).loadConfiguration(MaryIT.class.getResourceAsStream("test_conf.json"));
+
+        Request req = new Request(conf, input);
+        req.process();
+        System.out.println(req.serializeFinaleUtterance());
+        Assert.assertFalse(true);
     }
 }

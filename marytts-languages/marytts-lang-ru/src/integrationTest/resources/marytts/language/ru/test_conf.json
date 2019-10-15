@@ -1,0 +1,9 @@
+{
+    "marytts.runutils.Request": {
+        "input_serializer": "marytts.io.serializer.TextSerializer",
+        "output_serializer": "marytts.io.serializer.XMLSerializer",
+        "module_sequence": [
+            "REF:ru",
+        ]
+    }
+}

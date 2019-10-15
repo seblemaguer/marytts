@@ -2,7 +2,7 @@
     "marytts.runutils.Request": {
         "module_sequence": [
             "marytts.language.ru.Tokenizer",
-            "marytts.language.ru.Phonemiser"
+            "marytts.language.ru.Preprocess"
         ]
     },
     "marytts.language.ru.Phonemiser": {
