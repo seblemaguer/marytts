@@ -1,7 +1,8 @@
 package marytts.config;
 
-/* Stream */
+/* IO */
 import java.io.InputStream;
+import java.io.Serializable;
 
 /* Collections */
 import java.util.HashMap;
@@ -28,7 +29,7 @@ import org.apache.logging.log4j.core.Appender;
  *
  * @author <a href="mailto:slemaguer@coli.uni-saarland.de">Sébastien Le Maguer</a>
  */
-public class MaryConfiguration {
+public class MaryConfiguration implements Serializable {
     /** String to indicate that the following value is refering to a stored configuration */
     public static final String REF_HEADER = "REF:";
 
