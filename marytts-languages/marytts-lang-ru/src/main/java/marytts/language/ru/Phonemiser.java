@@ -23,9 +23,15 @@ package marytts.language.ru;
 // Configuration
 import marytts.config.MaryConfiguration;
 import marytts.config.MaryConfigurationFactory;
+
+// Exceptions
 import marytts.exceptions.MaryConfigurationException;
 import marytts.MaryException;
 
+// Phonetic
+import marytts.phonetic.AlphabetFactory;
+
+// Locale
 import java.util.Locale;
 
 /**
@@ -51,5 +57,6 @@ public class Phonemiser extends marytts.modules.nlp.JPhonemiser {
 	setLexicon(this.getClass().getResourceAsStream("/marytts/language/ru/lexicon/ru_lexicon.fst"));
 	setLetterToSound(this.getClass().getResourceAsStream("/marytts/language/ru/lexicon/ru.lts"));
 
-    }
-}
+        // Generate and add alphabet
+        alphabet_convertor = AlphabetFactory.getAlphabet("russian_alphabet");
+    }}

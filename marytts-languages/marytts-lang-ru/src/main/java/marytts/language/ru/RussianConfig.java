@@ -20,6 +20,11 @@
 package marytts.language.ru;
 
 
+// Phonetic
+import marytts.phonetic.AlphabetFactory;
+import marytts.language.ru.phonetic.RussianAlphabet;
+
+// Configuration
 import marytts.config.JSONMaryConfigLoader;
 import marytts.exceptions.MaryConfigurationException;
 
@@ -27,5 +32,8 @@ public class RussianConfig extends JSONMaryConfigLoader {
     public RussianConfig() throws MaryConfigurationException {
 	super();
         loadConfiguration("ru", RussianConfig.class.getResourceAsStream("ru.json"));
+
+        // Also load the needed alphabet
+        AlphabetFactory.addAlphabet("russian_alphabet", new RussianAlphabet());
     }
 }

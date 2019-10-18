@@ -81,7 +81,7 @@ public abstract class JPhonemiser extends MaryModule {
     protected final String FIRST_STRESS = "'";
     protected final String SECOND_STRESS = ",";
 
-    protected Alphabet sampa2ipa;
+    protected Alphabet alphabet_convertor;
     protected Map<String, List<String>> userdict;
     protected FSTLookup lexicon;
     protected TrainedLTS lts;
@@ -97,7 +97,7 @@ public abstract class JPhonemiser extends MaryModule {
 	super("phonemiser");
 
 	try {
-	    sampa2ipa = AlphabetFactory.getAlphabet("sampa");
+	    alphabet_convertor = AlphabetFactory.getAlphabet("sampa");
 	} catch (Exception ex) {
 	    throw new MaryConfigurationException("Cannot instantiate sampa alphabet converter", ex);
 	}
@@ -324,7 +324,7 @@ public abstract class JPhonemiser extends MaryModule {
     }
 
     protected Phoneme generatePhonemeFromLabel(String label) throws MaryException {
-	return new Phoneme(sampa2ipa.getCorrespondingIPA(label));
+	return new Phoneme(alphabet_convertor.getCorrespondingIPA(label));
     }
 
     /**
