@@ -1,12 +1,14 @@
 package marytts.config;
 
+import java.io.Serializable;
+
 /**
  * Encapsulation of a pair of integer for hashing purpose
  *
  * @author <a href="mailto:slemaguer@coli.uni-saarland.de">Sébastien Le
  *         Maguer</a>
  */
-public class StringPair {
+public class StringPair implements Serializable {
     /** the left member of the pair */
     private String left;
 
