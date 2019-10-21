@@ -3,6 +3,7 @@
         "module_sequence": [
             "marytts.language.ru.Tokenizer",
             "marytts.language.ru.Preprocess",
+            "marytts.modules.nlp.ProsodyGeneric",
             "marytts.language.ru.Phonemiser"
         ]
     },

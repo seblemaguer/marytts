@@ -33,7 +33,7 @@ public class RussianAlphabet extends Alphabet
         this.addIpaCorrespondance("g", "g");
         this.addIpaCorrespondance("gg", "gʲ");
         this.addIpaCorrespondance("c", "c");
-        this.addIpaCorrespondance("ch", "");    // FIXME: double check
+        this.addIpaCorrespondance("ch", "tɕ");    // FIXME: double check
         this.addIpaCorrespondance("f", "f");
         this.addIpaCorrespondance("ff", "fʲ");
         this.addIpaCorrespondance("v", "v");
@@ -42,9 +42,9 @@ public class RussianAlphabet extends Alphabet
         this.addIpaCorrespondance("ss", "sʲ");
         this.addIpaCorrespondance("z", "z");
         this.addIpaCorrespondance("zz", "zʲ");
-        this.addIpaCorrespondance("sh", "");    // FIXME: double check
-        this.addIpaCorrespondance("sch", "");   // FIXME: double check
-        this.addIpaCorrespondance("zh", "");    // FIXME: double check
+        this.addIpaCorrespondance("sh", "ʂ");    // FIXME: double check
+        this.addIpaCorrespondance("sch", "ɕː");   // FIXME: double check
+        this.addIpaCorrespondance("zh", "ʒ");    // FIXME: double check
         this.addIpaCorrespondance("h", "h");
         this.addIpaCorrespondance("hh", "hʲ");
         this.addIpaCorrespondance("m", "m");
