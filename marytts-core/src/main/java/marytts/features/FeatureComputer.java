@@ -191,7 +191,7 @@ public class FeatureComputer {
 
         m_features.put(name, new String[] {level, context, feature});
         m_feature_names.add(name);
-        logger.debug("Add feature named \"%s\" considering the following information (%s, %s, %s)", name, level, context, feature);
+        logger.debug(String.format("Add feature named \"%s\" considering the following information (%s, %s, %s)", name, level, context, feature));
     }
 
     /**
@@ -261,10 +261,10 @@ public class FeatureComputer {
      *             if anything is going wrong
      */
     public FeatureMap process(Utterance utt, Item item) throws MaryException {
-        logger.debug("Processing item \"%s\"", item);
+        logger.debug(String.format("Processing item \"%s\"", item.toString()));
         FeatureMap feature_map = new FeatureMap();
         for (String feature_name : m_features.keySet()) {
-            logger.debug("Process feature \"%s\"", feature_name);
+            logger.debug(String.format("Process feature \"%s\"", feature_name));
 
             String[] infos = m_features.get(feature_name);
             Feature feature = compute(utt, item, infos[LEVEL_INDEX], infos[CONTEXT_INDEX], infos[FEATURE_INDEX]);
