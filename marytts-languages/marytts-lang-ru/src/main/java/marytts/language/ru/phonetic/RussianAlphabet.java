@@ -20,42 +20,44 @@ public class RussianAlphabet extends Alphabet
 	super();
 
         // Consonnants
-        this.addIpaCorrespondance("p", "p");
-        this.addIpaCorrespondance("pp", "pʲ");
         this.addIpaCorrespondance("b", "b");
         this.addIpaCorrespondance("bb", "bʲ");
-        this.addIpaCorrespondance("t", "t");
-        this.addIpaCorrespondance("tt", "tʲ");
+        this.addIpaCorrespondance("c", "ts");
+        // this.addIpaCorrespondance("ch", "tɕ");    // FIXME: double check
+        this.addIpaCorrespondance("ch", "tʃ");
         this.addIpaCorrespondance("d", "d");
         this.addIpaCorrespondance("dd", "dʲ");
-        this.addIpaCorrespondance("k", "k");
-        this.addIpaCorrespondance("kk", "kʲ");
-        this.addIpaCorrespondance("g", "g");
-        this.addIpaCorrespondance("gg", "gʲ");
-        this.addIpaCorrespondance("c", "c");
-        this.addIpaCorrespondance("ch", "tɕ");    // FIXME: double check
         this.addIpaCorrespondance("f", "f");
         this.addIpaCorrespondance("ff", "fʲ");
-        this.addIpaCorrespondance("v", "v");
-        this.addIpaCorrespondance("vv", "vʲ");
-        this.addIpaCorrespondance("s", "s");
-        this.addIpaCorrespondance("ss", "sʲ");
-        this.addIpaCorrespondance("z", "z");
-        this.addIpaCorrespondance("zz", "zʲ");
-        this.addIpaCorrespondance("sh", "ʂ");    // FIXME: double check
-        this.addIpaCorrespondance("sch", "ɕː");   // FIXME: double check
-        this.addIpaCorrespondance("zh", "ʒ");    // FIXME: double check
+        this.addIpaCorrespondance("g", "ɡ");
+        this.addIpaCorrespondance("gg", "ɡʲ");
         this.addIpaCorrespondance("h", "h");
         this.addIpaCorrespondance("hh", "hʲ");
+        this.addIpaCorrespondance("j", "j");
+        this.addIpaCorrespondance("k", "k");
+        this.addIpaCorrespondance("kk", "kʲ");
+        this.addIpaCorrespondance("l", "l");
+        this.addIpaCorrespondance("ll", "lʲ");
         this.addIpaCorrespondance("m", "m");
         this.addIpaCorrespondance("mm", "mʲ");
         this.addIpaCorrespondance("n", "n");
         this.addIpaCorrespondance("nn", "nʲ");
-        this.addIpaCorrespondance("l", "l");
-        this.addIpaCorrespondance("ll", "lʲ");
+        this.addIpaCorrespondance("p", "p");
+        this.addIpaCorrespondance("pp", "pʲ");
         this.addIpaCorrespondance("r", "r");
         this.addIpaCorrespondance("rr", "rʲ");
-        this.addIpaCorrespondance("j", "j");
+        this.addIpaCorrespondance("s", "s");
+        this.addIpaCorrespondance("sch", "ɕ");   // FIXME: double check
+        // this.addIpaCorrespondance("sh", "ʂ");    // FIXME: double check
+        this.addIpaCorrespondance("sh", "ʃ");    // FIXME: double check
+        this.addIpaCorrespondance("ss", "sʲ");
+        this.addIpaCorrespondance("t", "t");
+        this.addIpaCorrespondance("tt", "tʲ");
+        this.addIpaCorrespondance("v", "v");
+        this.addIpaCorrespondance("vv", "vʲ");
+        this.addIpaCorrespondance("z", "z");
+        this.addIpaCorrespondance("zh", "ʒ");    // FIXME: double check
+        this.addIpaCorrespondance("zz", "zʲ");
 
 
 
