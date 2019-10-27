@@ -140,7 +140,7 @@ public class Mary {
 
         // Indicate that mary is starting
         currentState = MaryState.STARTING;
-        logger.info("Mary starting up...");
+        logger.info("Mary 6.0.1 starting up...");
         logger.info("Running on a Java " + System.getProperty("java.version") +  " implementation by "  + System.getProperty("java.vendor") +
 		    ", on a " + System.getProperty("os.name") +  " platform ("  + System.getProperty("os.arch") + ", " +  System.getProperty("os.version") + ")");
 

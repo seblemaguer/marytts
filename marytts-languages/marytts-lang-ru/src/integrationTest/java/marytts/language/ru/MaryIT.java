@@ -102,6 +102,6 @@ public class MaryIT extends marytts.MaryIT {
         Request req = new Request(conf, input);
         req.process();
         System.out.println(req.serializeFinaleUtterance());
-        Assert.assertFalse(true);
+        // Assert.assertFalse(true);
     }
 }
