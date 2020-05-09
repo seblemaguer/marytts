@@ -25,6 +25,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.HashMap;
+import java.util.HashSet;
 
 // Mary default
 import marytts.modules.MaryModule;
@@ -51,6 +52,7 @@ import marytts.features.FeatureMap;
  */
 public class TargetFeatureLister extends MaryModule {
 
+    Set<String> feature_subset;
     FeatureComputer feature_computer;
     /**
      * Default constructor
@@ -60,6 +62,7 @@ public class TargetFeatureLister extends MaryModule {
         super("feature");
 
         feature_computer = new FeatureComputer();
+        feature_subset = new HashSet<String>();
     }
 
     protected void setDescription() {
@@ -100,7 +103,12 @@ public class TargetFeatureLister extends MaryModule {
         int i = 0;
         List<IntegerPair> list_pairs = new ArrayList<IntegerPair>();
         for (Item it : items) {
-            FeatureMap map = feature_computer.process(utt, it);
+            // FIXME : support subset
+            FeatureMap map;
+            if (feature_subset.size() == 0)
+                map = feature_computer.process(utt, it);
+            else
+                map = feature_computer.process(utt, it, feature_subset);
             target_features.add(map);
             list_pairs.add(new IntegerPair(i, i));
             i++;
@@ -111,6 +119,10 @@ public class TargetFeatureLister extends MaryModule {
         utt.addSequence(SupportedSequenceType.FEATURES, target_features);
         utt.setRelation(SupportedSequenceType.SEGMENT, SupportedSequenceType.FEATURES, rel_seg_features);
         return utt;
+    }
+
+    public void setFeatureSubset(ArrayList<String> feature_ids) throws MaryConfigurationException {
+        feature_subset = new HashSet<String>(feature_ids);
     }
 
     public void setFeatureConfiguration(HashMap<String, Object> configuration) throws MaryConfigurationException {

@@ -1,6 +1,7 @@
 package marytts.features;
 
 // Java
+import java.util.Set;
 import java.util.Hashtable;
 import java.util.ArrayList;
 
@@ -261,9 +262,12 @@ public class FeatureComputer {
      *             if anything is going wrong
      */
     public FeatureMap process(Utterance utt, Item item) throws MaryException {
+        return process(utt, item, m_features.keySet());
+    }
+    public FeatureMap process(Utterance utt, Item item, Set<String> feature_subset) throws MaryException {
         logger.debug(String.format("Processing item \"%s\"", item.toString()));
         FeatureMap feature_map = new FeatureMap();
-        for (String feature_name : m_features.keySet()) {
+        for (String feature_name : feature_subset) {
             logger.debug(String.format("Process feature \"%s\"", feature_name));
 
             String[] infos = m_features.get(feature_name);
