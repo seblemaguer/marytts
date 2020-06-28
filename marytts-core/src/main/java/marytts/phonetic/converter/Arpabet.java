@@ -29,7 +29,7 @@ public class Arpabet extends Alphabet
         this.addIpaCorrespondance("em", "m̩");
         this.addIpaCorrespondance("en", "n̩");
         this.addIpaCorrespondance("f", "f");
-        this.addIpaCorrespondance("fj", "f");
+        this.addIpaCorrespondance("fj", "fʲ");
         this.addIpaCorrespondance("g", "ɡ");
         this.addIpaCorrespondance("gj", "ɡʲ");
         this.addIpaCorrespondance("hh", "h");
@@ -56,11 +56,13 @@ public class Arpabet extends Alphabet
         this.addIpaCorrespondance("rrr", "ʁ"); // FIXME: added by force!
         this.addIpaCorrespondance("s", "s");
         this.addIpaCorrespondance("sj", "sʲ");
-        this.addIpaCorrespondance("sch", "ɕ");   // FIXME: double check
+        this.addIpaCorrespondance("sch", "ɕ");
         this.addIpaCorrespondance("sh", "ʃ");
+        this.addIpaCorrespondance("ssh", "ʂ");
         this.addIpaCorrespondance("t", "t");
         this.addIpaCorrespondance("tj", "tʲ");
         this.addIpaCorrespondance("th", "θ");
+        this.addIpaCorrespondance("tch", "tɕ");
         this.addIpaCorrespondance("ts", "ts"); // FIXME: added by force
         this.addIpaCorrespondance("v", "v");
         this.addIpaCorrespondance("vj", "vʲ");
@@ -70,14 +72,15 @@ public class Arpabet extends Alphabet
         this.addIpaCorrespondance("z", "z");
         this.addIpaCorrespondance("zj", "zʲ");
         this.addIpaCorrespondance("zh", "ʒ");
+        this.addIpaCorrespondance("zzh", "ʐ");
         this.addIpaCorrespondance("jh", "dʒ");
 
         // Vowels or ohers
-        this.addIpaCorrespondance("as", "aˈ");
         this.addIpaCorrespondance("a", "a");
         this.addIpaCorrespondance("a:", "aː");
         this.addIpaCorrespondance("aa", "ɑ");
         this.addIpaCorrespondance("ae", "æ");
+        this.addIpaCorrespondance("sae", "ɪ̥");
         this.addIpaCorrespondance("ah", "ʌ");
         this.addIpaCorrespondance("ao", "ɔ");
         this.addIpaCorrespondance("aw", "aʊ");
@@ -86,7 +89,6 @@ public class Arpabet extends Alphabet
         this.addIpaCorrespondance("ay", "aɪ");
         this.addIpaCorrespondance("a~", "ã");
         this.addIpaCorrespondance("e", "e");
-        this.addIpaCorrespondance("es", "eˈ");
         this.addIpaCorrespondance("e:", "eː");
         this.addIpaCorrespondance("eh", "ɛ");
         this.addIpaCorrespondance("eh:", "ɛː");
@@ -99,10 +101,8 @@ public class Arpabet extends Alphabet
         this.addIpaCorrespondance("ih", "ɪ");
         this.addIpaCorrespondance("ix", "ɨ");
         this.addIpaCorrespondance("iy", "i");
-        this.addIpaCorrespondance("iys", "iˈ");
         this.addIpaCorrespondance("iy:", "iː");
         this.addIpaCorrespondance("o", "o");
-        this.addIpaCorrespondance("os", "oˈ");
         this.addIpaCorrespondance("o:", "oː");
         this.addIpaCorrespondance("oe", "ɐ");
         this.addIpaCorrespondance("oi", "ɔɪ");
@@ -110,13 +110,20 @@ public class Arpabet extends Alphabet
         this.addIpaCorrespondance("oy", "ɔʏ");
         this.addIpaCorrespondance("o~", "õ");
         this.addIpaCorrespondance("uh", "ʊ");
+        this.addIpaCorrespondance("ur", "ʊ̥");
         this.addIpaCorrespondance("uw", "u");
-        this.addIpaCorrespondance("uws", "uˈ");
         this.addIpaCorrespondance("uw:", "uː");
         this.addIpaCorrespondance("ux", "ʉ");
         this.addIpaCorrespondance("y", "yˈ");
-        this.addIpaCorrespondance("ys", "y");
         this.addIpaCorrespondance("y:", "yː");
         this.addIpaCorrespondance("yh", "ʏ");
+
+
+        this.addIpaCorrespondance("as", "aˈ");
+        this.addIpaCorrespondance("es", "eˈ");
+        this.addIpaCorrespondance("iys", "iˈ");
+        this.addIpaCorrespondance("os", "oˈ");
+        this.addIpaCorrespondance("uws", "uˈ");
+        this.addIpaCorrespondance("ys", "y");
     }
 }
